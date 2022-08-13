@@ -25,5 +25,4 @@ esac
 
 [ $CHARGING != "" ] && COLOR=0xff${NORD14:1}
 
-sketchybar --set "Control Center,Battery" alias.color=$COLOR
-
+sketchybar --set "Control Center,Battery" alias.color=$COLOR label="${PERCENTAGE}%"
