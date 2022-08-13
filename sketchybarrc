@@ -4,8 +4,6 @@
 source $HOME/.config/sketchybar/colors.sh
 
 PLUGIN_DIR="$HOME/.config/sketchybar/plugins" # Directory where all the plugin scripts are stored
-source $PLUGIN_DIR/battery.sh
-source $PLUGIN_DIR/wifi.sh
 
 
 # B A R  A P P E A R A N C E
@@ -94,8 +92,8 @@ sketchybar --add item clock right                                               
                                                                                   \
            --add alias "Control Center,Battery" right                             \
            --set "Control Center,Battery" script="$PLUGIN_DIR/battery.sh"         \
+                                          update_freq=10                          \
                                           label.drawing=on                        \
-                                          label="${PERCENTAGE}%"                  \
                                           background.padding_left=5               \
                                           background.padding_right=5              \
                                           background.color=0xff${NORD1:1}         \
@@ -108,8 +106,8 @@ sketchybar --add item clock right                                               
                                                                                   \
            --add alias "Control Center,WiFi" right                                \
            --set "Control Center,WiFi" script="$PLUGIN_DIR/wifi.sh"               \
+                                       update_freq=10                             \
                                        label.drawing=on                           \
-                                       label="${SSID}"                            \
                                        background.padding_left=5                  \
                                        background.padding_right=5                 \
                                        background.color=0xff${NORD1:1}            \
